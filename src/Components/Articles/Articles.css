@@ -1,0 +1,52 @@
+.articles {
+  display: flex;
+  gap: 1rem;
+}
+.articles .article {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.articles .article .image-box {
+  min-width: 10rem;
+  width: 15rem;
+  aspect-ratio: 1;
+}
+.articles .article .image-box img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.articles .article .content-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.articles .article .content-area .number {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: hsl(233deg, 8%, 79%);
+}
+.articles .article .content-area .title {
+  color: hsl(240deg, 100%, 5%);
+  font-size: 2rem;
+  cursor: pointer;
+}
+.articles .article .content-area .title:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+.articles .article .content-area .excerpt {
+  color: hsl(233deg, 8%, 79%);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 776px) {
+  .articles {
+    flex-direction: column;
+  }
+  .articles .article .content-area {
+    justify-content: space-evenly;
+  }
+}
+/*# sourceMappingURL=Articles.css.map */

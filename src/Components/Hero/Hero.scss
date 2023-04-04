@@ -1,0 +1,119 @@
+.hero {
+    width: 100%;
+    margin: 5rem 0;
+    display: grid;
+    grid-template-columns: auto 35rem;
+    gap: 2rem;
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        .left-top {
+            height: 400px;
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .left-bottom {
+            display: flex;
+            flex-direction: row;
+            padding: 2rem 0;
+            gap:2rem;
+
+            .left-bottom-left {
+                h1 {
+                    font-size: 4rem;
+                    font-weight: bolder;
+                }
+            }
+
+            .left-bottom-right {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                p {
+                    color: hsl(236, 13%, 42%);
+                    font-size: 1.5rem;
+                }
+
+                button {
+                    padding: 1.5rem;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    letter-spacing: .3rem;
+                    color: hsl(36, 100%, 99%);
+                    border: none;
+                    font-size: 1.5rem;
+                    width: max-content;
+                    background-color: hsl(5, 85%, 63%);
+                    cursor: pointer;
+                    &:hover{
+                        background-color:  hsl(240, 100%, 5%);
+                    }
+                }
+            }
+        }
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: hsl(240, 100%, 5%);
+        height: 100%;
+
+        h1 {
+            color: hsl(35, 77%, 62%);
+            font-size: 3rem;
+        }
+
+        .content-box {
+            flex: 1;
+            margin: 5rem 0;
+            .content {
+                width: 100%;
+                margin-top: 2rem;
+                h2 {
+                    color: white;
+                    font-weight: bold;
+                    font-size: 2rem;
+                    cursor: pointer;
+
+                    &:hover{
+                        color:hsl(35, 77%, 62%);
+                    }
+                }
+
+                p {
+                    color: hsl(30, 2%, 80%);
+                    padding: 10px 0;
+                    font-size: 1.5rem;
+                    padding-bottom: 5rem;
+                    border-bottom: 1px solid;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:776px){
+    .hero{
+        grid-template-columns: 4fr;
+
+        .left{
+            .left-bottom{
+                flex-direction: column;
+                .left-bottom-right{
+                    button{
+                        margin:1.5rem 0;
+                    }
+                }
+            }
+        }
+    }
+}

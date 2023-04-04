@@ -1,0 +1,103 @@
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 50px 10%;
+    position: relative;
+
+    .menu-icon {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        list-style: none;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: hsl(236, 13%, 42%);
+        transition: .3s;
+
+        .icon-cross {
+            display: none;
+        }
+
+        li {
+            cursor: pointer;
+
+            &:hover {
+                color: hsl(5, 85%, 63%);
+            }
+        }
+
+    }
+}
+
+@media (max-width:576px) {
+    header {
+        padding: 5rem 5%;
+
+        nav ul {
+            gap: 10px;
+        }
+    }
+}
+
+@media (max-width:425px) {
+    header {
+        align-items: center;
+
+        .menu-icon {
+            display: block;
+            font-size: 2.5rem;
+            cursor: pointer;
+        }
+
+        .menu-open {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        nav {
+            height: 100vh;
+            position: absolute;
+            display: none;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.644);
+
+            ul {
+                background-color: white;
+                height: 100%;
+                width: 60%;
+                flex-direction: column;
+                align-content: flex-start;
+                flex-wrap: wrap;
+                justify-content: center;
+                position: relative;
+
+                li {
+                    width: 100%;
+                    text-align: start;
+                    padding: 10px 20px;
+                }
+
+                .icon-cross {
+                    display: block;
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    font-size: 2.5rem;
+                    cursor: pointer;
+                }
+
+            }
+        }
+    }
+}

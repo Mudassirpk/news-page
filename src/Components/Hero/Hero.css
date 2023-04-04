@@ -1,0 +1,105 @@
+.hero {
+  width: 100%;
+  margin: 5rem 0;
+  display: grid;
+  grid-template-columns: auto 35rem;
+  gap: 2rem;
+}
+.hero .left {
+  display: flex;
+  flex-direction: column;
+}
+.hero .left .left-top {
+  height: 400px;
+  width: 100%;
+}
+.hero .left .left-top img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero .left .left-bottom {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 0;
+  gap: 2rem;
+}
+.hero .left .left-bottom .left-bottom-left h1 {
+  font-size: 4rem;
+  font-weight: bolder;
+}
+.hero .left .left-bottom .left-bottom-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero .left .left-bottom .left-bottom-right p {
+  color: hsl(236deg, 13%, 42%);
+  font-size: 1.5rem;
+}
+.hero .left .left-bottom .left-bottom-right button {
+  padding: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.3rem;
+  color: hsl(36deg, 100%, 99%);
+  border: none;
+  font-size: 1.5rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: hsl(5deg, 85%, 63%);
+  cursor: pointer;
+}
+.hero .left .left-bottom .left-bottom-right button:hover {
+  background-color: hsl(240deg, 100%, 5%);
+}
+.hero .right {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: hsl(240deg, 100%, 5%);
+  height: 100%;
+}
+.hero .right h1 {
+  color: hsl(35deg, 77%, 62%);
+  font-size: 3rem;
+}
+.hero .right .content-box {
+  flex: 1;
+  margin: 5rem 0;
+}
+.hero .right .content-box .content {
+  width: 100%;
+  margin-top: 2rem;
+}
+.hero .right .content-box .content h2 {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.hero .right .content-box .content h2:hover {
+  color: hsl(35deg, 77%, 62%);
+}
+.hero .right .content-box .content p {
+  color: hsl(30deg, 2%, 80%);
+  padding: 10px 0;
+  font-size: 1.5rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid;
+}
+
+@media (max-width: 776px) {
+  .hero {
+    grid-template-columns: 4fr;
+  }
+  .hero .left .left-bottom {
+    flex-direction: column;
+  }
+  .hero .left .left-bottom .left-bottom-right button {
+    margin: 1.5rem 0;
+  }
+}
+/*# sourceMappingURL=Hero.css.map */
